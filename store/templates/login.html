@@ -15,7 +15,13 @@
       </div>
       <h3 class="alert alert-light rounded-pill" style="text-align:center">Login</h3>
       <form action="/login" method="POST">
+        {% csrf_token %}
 
+        {% if error%}
+        <div class="alert alert-danger" role="alert">
+          {{error}}
+        </div>
+        {% endif %}
       </form>
     </div>
   </div>
