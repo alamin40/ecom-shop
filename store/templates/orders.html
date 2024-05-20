@@ -23,7 +23,7 @@
       </thead>
       <tbody>
 
-
+        {% for order in orders %}
         <tr>
           <td>{{forloop.counter}}</td>
           <td><img style="height: 80px;" class="rounded-circle" src="{{order.product.image.url}}" alt=""></td>
@@ -39,7 +39,7 @@
 
         </tr>
 
-
+        {% endfor %}
 
       </tbody>
 
