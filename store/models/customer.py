@@ -12,3 +12,5 @@ class Customer(models.Model):
         self.save()
 
 
+    @staticmethod
+    def get_customer_by_email(email):
