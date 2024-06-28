@@ -19,3 +19,7 @@ class Customer(models.Model):
         except:
             return False
 
+    def isExists(self):
+        if Customer.objects.filter(email=self.email):
+            return True
+
